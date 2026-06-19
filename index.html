@@ -243,6 +243,51 @@
   .partner-logo.navy-bg{background:var(--navy);}
   .partner-note{color:var(--grey);font-size:0.92rem;margin-top:30px;}
 
+  /* ---------- Events & policy ---------- */
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:56px;}
+  .feat{
+    background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:30px 28px;
+  }
+  .feat .kicker{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-hover);}
+  .feat h3{font-size:1.22rem;font-weight:800;letter-spacing:-0.02em;margin:10px 0 12px;}
+  .feat p{color:var(--grey);font-size:0.97rem;}
+
+  /* Register-interest form card */
+  .register{
+    background:linear-gradient(120deg,var(--navy) 0%,var(--blue-light) 100%);color:var(--white);
+    border-radius:var(--radius);padding:48px;box-shadow:var(--card-shadow);
+  }
+  .register-intro{max-width:60ch;margin-bottom:28px;}
+  .register-intro .sec-eyebrow{color:var(--gold-light);}
+  .register-intro h3{font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
+  .register-intro p{color:rgba(255,255,255,0.84);font-size:1.04rem;}
+  .event-form{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .field{display:flex;flex-direction:column;gap:7px;border:0;padding:0;min-width:0;}
+  .field.full{grid-column:1 / -1;}
+  .event-form label,.event-form legend{font-size:0.86rem;font-weight:600;color:rgba(255,255,255,0.92);padding:0;}
+  .event-form .req{color:var(--gold-light);}
+  .event-form .optional{font-weight:500;color:rgba(255,255,255,0.6);}
+  .event-form input[type=text],
+  .event-form input[type=email],
+  .event-form textarea{
+    font:inherit;width:100%;padding:12px 14px;border-radius:10px;
+    border:1px solid rgba(255,255,255,0.28);background:rgba(255,255,255,0.96);color:var(--navy);
+  }
+  .event-form textarea{resize:vertical;}
+  .event-form input::placeholder,.event-form textarea::placeholder{color:#8a93a8;}
+  .checks{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:4px;}
+  .check{display:flex;align-items:center;gap:9px;font-weight:500;color:#fff;cursor:pointer;}
+  .check input{width:18px;height:18px;accent-color:var(--gold);cursor:pointer;}
+  .form-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:6px;}
+  .form-note{font-size:0.86rem;color:rgba(255,255,255,0.66);margin:0;}
+  .hp{position:absolute;left:-9999px;}
+  .form-success{
+    background:linear-gradient(120deg,var(--navy) 0%,var(--blue-light) 100%);color:var(--white);
+    border-radius:var(--radius);padding:48px;box-shadow:var(--card-shadow);text-align:center;
+  }
+  .form-success h3{font-size:1.5rem;font-weight:800;margin-bottom:10px;}
+  .form-success p{color:rgba(255,255,255,0.84);max-width:46ch;margin:0 auto;}
+
   /* ---------- CTA ---------- */
   .cta-band{
     background:linear-gradient(120deg,var(--navy) 0%,var(--blue-light) 100%);color:var(--white);text-align:center;
@@ -276,6 +321,7 @@
   @media(max-width:1024px){
     .mission-grid{gap:40px;}
     .pillars-grid{grid-template-columns:repeat(2,1fr);gap:18px;}
+    .feat-grid{gap:18px;}
     section{padding:64px 0;}
   }
   @media(max-width:860px){
@@ -290,6 +336,7 @@
     .mission-grid{grid-template-columns:1fr;gap:32px;}
     .pillars-grid{grid-template-columns:1fr;}
     .agenda-grid{grid-template-columns:1fr;}
+    .feat-grid{grid-template-columns:1fr;}
     .foot-grid{grid-template-columns:1fr;gap:30px;}
     .hero-inner{padding:72px 0 80px;}
   }
@@ -300,6 +347,8 @@
     .sec-head{margin-bottom:34px;}
     .hero-stats{gap:28px 36px;margin-top:38px;padding-top:24px;}
     .foot-bottom{flex-direction:column;}
+    .event-form{grid-template-columns:1fr;}
+    .register,.form-success{padding:30px 22px;}
   }
   /* Small phones: full-width CTAs for easier tapping */
   @media(max-width:480px){
@@ -330,6 +379,7 @@
       <a href="#mission">About</a>
       <a href="#group">The Group</a>
       <a href="#agenda">What We Do</a>
+      <a href="#events">Events</a>
       <a href="#partners">Partners</a>
       <a class="nav-cta" href="#contact">Get in touch</a>
     </nav>
@@ -447,6 +497,91 @@
   </div>
 </section>
 
+<!-- EVENTS & POLICY -->
+<section class="events" id="events">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Flagship events &amp; policy</span>
+      <h2 class="sec-title">Putting North East trade on the national stage</h2>
+      <p>Every year Trade NE hosts one to two flagship events built around North East trade — bringing the region's businesses together to celebrate what we do and open new doors. Alongside our events, we shape policy and engage directly with government on behalf of the North East.</p>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <span class="kicker">In the capital</span>
+        <h3>A London trade event</h3>
+        <p>An annual showcase in London, giving North East trade a voice in Westminster and connecting the region to investment, partners and new opportunities.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="kicker">On home ground</span>
+        <h3>A North East trade event</h3>
+        <p>A home fixture each year celebrating the businesses, founders and high streets powering our regional economy — and the trade that keeps the North East open for business.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="kicker">Policy &amp; influence</span>
+        <h3>A voice in government</h3>
+        <p>We shape policy and engage with government and decision-makers on behalf of the North East — making the case for the region's trade, investment and growth.</p>
+      </div>
+    </div>
+
+    <div class="register" id="register">
+      <div class="register-intro">
+        <span class="sec-eyebrow">Register your interest</span>
+        <h3>Be first to hear about our flagship events</h3>
+        <p>Want to be part of Trade NE's London and North East trade events? Register your interest and we'll keep you posted on dates, tickets and how to get involved.</p>
+      </div>
+
+      <form class="event-form" name="event-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?registered=1">
+        <input type="hidden" name="form-name" value="event-interest" />
+        <p class="hp" hidden aria-hidden="true">
+          <label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+        </p>
+
+        <div class="field">
+          <label for="ef-name">Full name <span class="req" aria-hidden="true">*</span></label>
+          <input id="ef-name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="ef-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="ef-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="ef-org">Business / organisation</label>
+          <input id="ef-org" name="organisation" type="text" autocomplete="organization" />
+        </div>
+        <div class="field">
+          <label for="ef-role">Your role</label>
+          <input id="ef-role" name="role" type="text" autocomplete="organization-title" />
+        </div>
+
+        <fieldset class="field full">
+          <legend>Which would you like to hear about?</legend>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="interest" value="London trade event" /> London trade event</label>
+            <label class="check"><input type="checkbox" name="interest" value="North East trade event" /> North East trade event</label>
+            <label class="check"><input type="checkbox" name="interest" value="Policy &amp; government engagement" /> Policy &amp; government engagement</label>
+          </div>
+        </fieldset>
+
+        <div class="field full">
+          <label for="ef-msg">Anything you'd like to add? <span class="optional">(optional)</span></label>
+          <textarea id="ef-msg" name="message" rows="3"></textarea>
+        </div>
+
+        <div class="field full form-actions">
+          <button class="btn btn-primary" type="submit">Register my interest →</button>
+          <p class="form-note">We'll only use your details to keep you updated about Trade NE events. No spam, ever.</p>
+        </div>
+      </form>
+
+      <div class="form-success" id="formSuccess" role="status" hidden>
+        <h3>Thank you — you're on the list.</h3>
+        <p>We've received your details and will be in touch with news about Trade NE's upcoming events.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PARTNERS -->
 <section class="partners" id="partners">
   <div class="wrap">
@@ -510,6 +645,7 @@
           <li><a href="#mission">About Trade NE</a></li>
           <li><a href="#group">The Group</a></li>
           <li><a href="#agenda">What We Do</a></li>
+          <li><a href="#events">Events</a></li>
           <li><a href="#partners">Partners</a></li>
         </ul>
       </div>
@@ -567,6 +703,35 @@
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:0.15});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // Event register-interest form: AJAX submit to Netlify with graceful fallback.
+  // If JS is disabled or the request fails, the standard POST (action="/?registered=1") still works.
+  var eventForm = document.querySelector('form[name="event-interest"]');
+  var formSuccess = document.getElementById('formSuccess');
+  if (eventForm && formSuccess && window.fetch) {
+    eventForm.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var btn = eventForm.querySelector('button[type="submit"]');
+      if (btn){ btn.disabled = true; btn.textContent = 'Sending…'; }
+      var data = new URLSearchParams(new FormData(eventForm)).toString();
+      fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: data
+      }).then(function(res){
+        if(!res.ok){ throw new Error('Network response was not ok'); }
+        eventForm.hidden = true;
+        formSuccess.hidden = false;
+        formSuccess.setAttribute('tabindex','-1');
+        formSuccess.focus();
+        formSuccess.scrollIntoView({behavior:'smooth', block:'center'});
+      }).catch(function(){
+        // Fall back to a normal submission so the user is never stuck.
+        if (btn){ btn.disabled = false; btn.textContent = 'Register my interest →'; }
+        eventForm.submit();
+      });
+    });
+  }
 </script>
 
 </body>
