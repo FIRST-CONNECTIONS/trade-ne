@@ -203,7 +203,7 @@
   .mission-img img{width:100%;height:100%;object-fit:cover;}
 
   /* ---------- Pillars (group assets) ---------- */
-  .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
   .pillar{
     background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;
     box-shadow:var(--card-shadow);transition:transform .18s,box-shadow .18s;position:relative;overflow:hidden;
@@ -272,10 +272,10 @@
   .reveal.in{opacity:1;transform:none;}
 
   /* ---------- Responsive ---------- */
-  /* Tablet: ease the 3-up grids and oversized gaps */
+  /* Tablet: ease the multi-column grids and oversized gaps */
   @media(max-width:1024px){
     .mission-grid{gap:40px;}
-    .pillars-grid{gap:18px;}
+    .pillars-grid{grid-template-columns:repeat(2,1fr);gap:18px;}
     section{padding:64px 0;}
   }
   @media(max-width:860px){
@@ -300,6 +300,12 @@
     .sec-head{margin-bottom:34px;}
     .hero-stats{gap:28px 36px;margin-top:38px;padding-top:24px;}
     .foot-bottom{flex-direction:column;}
+  }
+  /* Small phones: full-width CTAs for easier tapping */
+  @media(max-width:480px){
+    .hero-actions{flex-direction:column;align-items:stretch;}
+    .hero-actions .btn{width:100%;justify-content:center;}
+    .partner-logo{flex:1 1 140px;height:92px;padding:18px 20px;}
   }
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;}
@@ -404,6 +410,12 @@
         <p>Our awards campaign celebrating the independent retailers and high-street businesses at the heart of the North East.</p>
         <a class="link" href="https://first-connections.co.uk/" target="_blank" rel="noopener">Explore the Awards →</a>
       </div>
+      <div class="pillar reveal">
+        <span class="tag">The network</span>
+        <h3>First Connections</h3>
+        <p>The North East's networking and growth platform — the people, events and connections behind every Trade NE campaign.</p>
+        <a class="link" href="https://first-connections.co.uk/" target="_blank" rel="noopener">Explore First Connections →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -450,7 +462,7 @@
       <div class="partner-logo">
         <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/Roam-App_logo.png" alt="Roam Local" loading="lazy" decoding="async" />
       </div>
-      <div class="partner-logo navy-bg">
+      <div class="partner-logo">
         <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/Surgo-tech-logo-white.png" alt="Surgo Tech" loading="lazy" decoding="async" />
       </div>
       <div class="partner-logo">
