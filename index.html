@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trade NE | The voice of business across the North East</title>
+<meta name="description" content="Trade NE is the North East's business alliance, championing the region's traders, founders and high streets. A First Connections initiative, made possible by our delivery partners." />
+<link rel="canonical" href="https://trade-ne.co.uk/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Trade NE" />
+<meta property="og:title" content="Trade NE | The voice of business across the North East" />
+<meta property="og:description" content="The North East's business alliance, championing the region's traders, founders and high streets. A First Connections initiative." />
+<meta property="og:url" content="https://trade-ne.co.uk/" />
+<meta property="og:image" content="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/NE%20website%20Images/Angel_of_the_north1.png" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Trade NE | The voice of business across the North East" />
+<meta name="twitter:description" content="The North East's business alliance, championing the region's traders, founders and high streets." />
+<meta name="twitter:image" content="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/NE%20website%20Images/Angel_of_the_north1.png" />
+
+<!-- Geo -->
+<meta name="geo.region" content="GB-ENG" />
+<meta name="geo.placename" content="North East England" />
+
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/First-Connections-Logo-Small.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet" />
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Trade NE",
+  "alternateName": "Trade North East",
+  "description": "The North East's business alliance, championing the region's traders, founders and high streets. A First Connections initiative.",
+  "url": "https://trade-ne.co.uk/",
+  "logo": "https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/First-Connections-Logo-Small.png",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "First Connections",
+    "url": "https://first-connections.co.uk/"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "North East England"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --navy:#1f3667;
+    --navy-deep:#162748;
+    --blue-light:#2845A0;
+    --gold:#ECB344;
+    --gold-light:#F5C355;
+    --gold-hover:#d4981e;
+    --white:#ffffff;
+    --off-white:#F7F8FC;
+    --grey:#5A6478;
+    --light-grey:#F0F2F7;
+    --border:#E2E6F0;
+    --card-shadow:0 2px 20px rgba(31,54,103,0.08);
+    --radius:14px;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Inter",system-ui,sans-serif;
+    color:var(--navy);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* ---------- The signature: the route line ---------- */
+  .route-rule{
+    height:2px;border:0;background:var(--border);position:relative;overflow:visible;margin:0;
+  }
+  .route-rule::before{
+    content:"";position:absolute;left:0;top:50%;width:64px;height:2px;
+    background:var(--gold);transform:translateY(-50%);
+  }
+  .route-rule::after{
+    content:"";position:absolute;left:64px;top:50%;width:9px;height:9px;border-radius:50%;
+    background:var(--gold);transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(236,179,68,0.18);
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(31,54,103,0.97);
+    backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .brand{display:flex;align-items:center;gap:12px;color:var(--white);font-weight:800;letter-spacing:-0.02em;font-size:1.2rem;}
+  .brand .mark{
+    display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;
+    background:var(--gold);color:var(--navy);font-weight:900;font-size:0.95rem;letter-spacing:-0.04em;
+  }
+  .brand small{display:block;font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-light);margin-top:1px;}
+  .nav-links{display:flex;gap:30px;align-items:center;}
+  .nav-links a{color:rgba(255,255,255,0.82);font-weight:600;font-size:0.92rem;transition:color .15s;}
+  .nav-links a:hover{color:var(--white);}
+  .nav-cta{
+    background:var(--gold);color:var(--navy)!important;padding:9px 18px;border-radius:9px;font-weight:700;
+    transition:background .15s,transform .15s;
+  }
+  .nav-cta:hover{background:var(--gold-light);transform:translateY(-1px);}
+  .nav-toggle{display:none;background:none;border:0;color:var(--white);font-size:1.6rem;cursor:pointer;line-height:1;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;color:var(--white);
+    background:
+      linear-gradient(180deg, rgba(22,39,72,0.86) 0%, rgba(31,54,103,0.92) 100%),
+      url("https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/NE%20website%20Images/Angel_of_the_north1.png") center/cover no-repeat;
+    overflow:hidden;
+  }
+  .hero-inner{padding:96px 0 110px;position:relative;z-index:2;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;font-size:0.78rem;font-weight:700;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--gold-light);margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:30px;height:2px;background:var(--gold);display:inline-block;}
+  .hero h1{
+    font-size:clamp(2.4rem,5.4vw,4.1rem);font-weight:900;line-height:1.04;letter-spacing:-0.03em;max-width:16ch;
+  }
+  .hero h1 .accent{color:var(--gold-light);}
+  .hero p.lede{font-size:clamp(1.05rem,1.6vw,1.32rem);color:rgba(255,255,255,0.86);max-width:54ch;margin:26px 0 36px;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:11px;font-weight:700;font-size:1rem;
+    transition:transform .15s,background .15s,box-shadow .15s;cursor:pointer;border:0;
+  }
+  .btn-primary{background:var(--gold);color:var(--navy);}
+  .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(236,179,68,0.32);}
+  .btn-ghost{background:rgba(255,255,255,0.08);color:var(--white);border:1px solid rgba(255,255,255,0.28);}
+  .btn-ghost:hover{background:rgba(255,255,255,0.16);transform:translateY(-2px);}
+
+  /* hero stat strip */
+  .hero-stats{
+    display:flex;gap:46px;flex-wrap:wrap;margin-top:54px;padding-top:30px;
+    border-top:1px solid rgba(255,255,255,0.14);
+  }
+  .hero-stats .stat .num{font-size:1.9rem;font-weight:900;letter-spacing:-0.02em;color:var(--white);}
+  .hero-stats .stat .lbl{font-size:0.85rem;color:rgba(255,255,255,0.7);font-weight:500;}
+
+  /* ---------- Section scaffolding ---------- */
+  section{padding:80px 0;}
+  .sec-head{max-width:62ch;margin-bottom:48px;}
+  .sec-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;font-size:0.75rem;font-weight:700;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--gold-hover);margin-bottom:14px;
+  }
+  .sec-eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);display:inline-block;}
+  h2.sec-title{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;}
+  .sec-head p{color:var(--grey);font-size:1.08rem;margin-top:16px;}
+
+  /* ---------- Mission ---------- */
+  .mission{background:var(--off-white);}
+  .mission-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;}
+  .mission-grid p{color:var(--grey);font-size:1.06rem;margin-bottom:18px;}
+  .mission-grid p strong{color:var(--navy);}
+  .mission-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--card-shadow);aspect-ratio:4/3;}
+  .mission-img img{width:100%;height:100%;object-fit:cover;}
+
+  /* ---------- Pillars (group assets) ---------- */
+  .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pillar{
+    background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;
+    box-shadow:var(--card-shadow);transition:transform .18s,box-shadow .18s;position:relative;overflow:hidden;
+  }
+  .pillar::before{content:"";position:absolute;left:0;top:0;height:100%;width:4px;background:var(--gold);}
+  .pillar:hover{transform:translateY(-4px);box-shadow:0 12px 34px rgba(31,54,103,0.14);}
+  .pillar .tag{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-hover);}
+  .pillar h3{font-size:1.32rem;font-weight:800;letter-spacing:-0.02em;margin:10px 0 12px;}
+  .pillar p{color:var(--grey);font-size:0.97rem;margin-bottom:18px;}
+  .pillar a.link{font-weight:700;color:var(--blue-light);font-size:0.93rem;display:inline-flex;align-items:center;gap:6px;}
+  .pillar a.link:hover{color:var(--navy);}
+
+  /* ---------- What we do ---------- */
+  .agenda{background:var(--navy);color:var(--white);}
+  .agenda .sec-eyebrow{color:var(--gold-light);}
+  .agenda h2.sec-title{color:var(--white);}
+  .agenda-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.1);border-radius:var(--radius);overflow:hidden;margin-top:8px;}
+  .agenda-item{background:var(--navy);padding:34px 30px;transition:background .2s;}
+  .agenda-item:hover{background:var(--navy-deep);}
+  .agenda-item .idx{font-size:0.8rem;font-weight:700;color:var(--gold-light);letter-spacing:0.1em;}
+  .agenda-item h3{font-size:1.2rem;font-weight:700;margin:12px 0 10px;letter-spacing:-0.01em;}
+  .agenda-item p{color:rgba(255,255,255,0.72);font-size:0.95rem;}
+
+  /* ---------- Partners ---------- */
+  .partners{background:var(--off-white);text-align:center;}
+  .partners .sec-head{margin-left:auto;margin-right:auto;}
+  .partner-strip{
+    display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:30px;margin-top:8px;
+  }
+  .partner-logo{
+    background:var(--white);border:1px solid var(--border);border-radius:12px;padding:22px 28px;
+    height:104px;display:flex;align-items:center;justify-content:center;flex:0 1 200px;
+    transition:transform .16s,box-shadow .16s;
+  }
+  .partner-logo:hover{transform:translateY(-3px);box-shadow:var(--card-shadow);}
+  .partner-logo img{max-height:52px;width:auto;object-fit:contain;}
+  .partner-logo.navy-bg{background:var(--navy);}
+  .partner-note{color:var(--grey);font-size:0.92rem;margin-top:30px;}
+
+  /* ---------- CTA ---------- */
+  .cta-band{
+    background:linear-gradient(120deg,var(--navy) 0%,var(--blue-light) 100%);color:var(--white);text-align:center;
+  }
+  .cta-band h2{font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:900;letter-spacing:-0.025em;max-width:20ch;margin:0 auto 16px;}
+  .cta-band p{color:rgba(255,255,255,0.84);font-size:1.08rem;max-width:52ch;margin:0 auto 32px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy-deep);color:rgba(255,255,255,0.72);padding:56px 0 30px;}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  .foot-brand .brand{margin-bottom:16px;}
+  .foot-brand p{font-size:0.94rem;max-width:38ch;}
+  footer h4{color:var(--white);font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px;font-weight:700;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:10px;}
+  footer a{font-size:0.94rem;transition:color .15s;}
+  footer a:hover{color:var(--gold-light);}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:12px;font-size:0.86rem;
+  }
+  .foot-bottom .fc-tag{display:inline-flex;align-items:center;gap:8px;}
+  .foot-bottom .fc-tag img{height:22px;}
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:860px){
+    .nav-links{
+      position:absolute;top:68px;left:0;right:0;background:var(--navy);flex-direction:column;gap:0;
+      padding:8px 24px 20px;border-bottom:1px solid rgba(255,255,255,0.08);display:none;
+    }
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:13px 0;width:100%;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .nav-cta{margin-top:10px;text-align:center;}
+    .nav-toggle{display:block;}
+    .mission-grid{grid-template-columns:1fr;gap:32px;}
+    .pillars-grid{grid-template-columns:1fr;}
+    .agenda-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;gap:30px;}
+    .hero-inner{padding:72px 0 80px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Trade NE home">
+      <span class="mark">NE</span>
+      <span>Trade NE<small>North East</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#mission">About</a>
+      <a href="#group">The Group</a>
+      <a href="#agenda">What We Do</a>
+      <a href="#partners">Partners</a>
+      <a class="nav-cta" href="#contact">Get in touch</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">A First Connections initiative</span>
+    <h1>The voice of business across the <span class="accent">North East</span>.</h1>
+    <p class="lede">Trade NE champions the people who power our region — the independent traders, the founders, the high streets and the employers who make the North East work. One alliance, speaking up for all of them.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#mission">Discover Trade NE →</a>
+      <a class="btn btn-ghost" href="#partners">Our partners</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="num">3</div><div class="lbl">Regional campaigns under one roof</div></div>
+      <div class="stat"><div class="num">1</div><div class="lbl">Unified voice for North East business</div></div>
+      <div class="stat"><div class="num">£9.90</div><div class="lbl">Connected to the UK, from — via Lumo</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission" id="mission">
+  <div class="wrap">
+    <div class="mission-grid">
+      <div>
+        <span class="sec-eyebrow">Who we are</span>
+        <h2 class="sec-title">One region. One voice. Real momentum.</h2>
+        <p style="margin-top:18px;">Trade NE is the business alliance for the North East of England — built and run by <strong>First Connections</strong>, the region's networking and growth platform.</p>
+        <p>Where others speak for a single town or a single sector, we bring the whole region's business community together: the independents on the high street, the start-ups finding their feet, and the established employers anchoring our towns and cities.</p>
+        <p>We exist to <strong>connect, champion and grow</strong> North East business — making the case for the region with the people and partners who can move things forward.</p>
+        <a class="btn btn-primary" href="#contact" style="margin-top:10px;">Work with us →</a>
+      </div>
+      <div class="mission-img">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/NE%20website%20Images/img-teesside-steel.jpg" alt="Industry and enterprise in the North East of England" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="route-rule" />
+
+<!-- GROUP ASSETS / PILLARS -->
+<section id="group">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">The First Connections group</span>
+      <h2 class="sec-title">The campaigns behind Trade NE</h2>
+      <p>Trade NE stands on its own as the region's alliance — backed by the established First Connections campaigns and assets already working across the North East.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar reveal">
+        <span class="tag">City network</span>
+        <h3>Newcastle First</h3>
+        <p>Connecting and championing the businesses driving Newcastle and Tyneside forward — from independents to major employers.</p>
+        <a class="link" href="https://first-connections.co.uk/" target="_blank" rel="noopener">Explore Newcastle First →</a>
+      </div>
+      <div class="pillar reveal">
+        <span class="tag">Town network</span>
+        <h3>Darlington First</h3>
+        <p>Putting Darlington's business community on the map, supporting its traders and growing local enterprise.</p>
+        <a class="link" href="https://first-connections.co.uk/" target="_blank" rel="noopener">Explore Darlington First →</a>
+      </div>
+      <div class="pillar reveal">
+        <span class="tag">Campaign</span>
+        <h3>NE High Street Heroes</h3>
+        <p>Our awards campaign celebrating the independent retailers and high-street businesses at the heart of the North East.</p>
+        <a class="link" href="https://first-connections.co.uk/" target="_blank" rel="noopener">Explore the Awards →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="agenda" id="agenda">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Our agenda</span>
+      <h2 class="sec-title">What Trade NE does for the region</h2>
+    </div>
+    <div class="agenda-grid">
+      <div class="agenda-item">
+        <span class="idx">01</span>
+        <h3>Champion</h3>
+        <p>We make the case for North East business — to government, to investors and to partners — so the region's contribution is heard and backed.</p>
+      </div>
+      <div class="agenda-item">
+        <span class="idx">02</span>
+        <h3>Connect</h3>
+        <p>We bring the region's businesses together through First Connections' networks, events and campaigns, turning isolated effort into shared momentum.</p>
+      </div>
+      <div class="agenda-item">
+        <span class="idx">03</span>
+        <h3>Grow</h3>
+        <p>We help businesses start, sustain and scale in the North East — celebrating success and opening doors to the support that makes growth possible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners" id="partners">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Delivery partners</span>
+      <h2 class="sec-title">Made possible by our partners</h2>
+      <p>Trade NE is powered by the organisations who invest in the North East alongside us — connecting the region, supporting its businesses and backing the cause.</p>
+    </div>
+    <div class="partner-strip">
+      <a class="partner-logo" href="https://www.lumo.co.uk/" target="_blank" rel="noopener" aria-label="Lumo Trains">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/lumo-trains.png" alt="Lumo Trains" loading="lazy" />
+      </a>
+      <a class="partner-logo" href="#" aria-label="Roam Local">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/Roam-App_logo.png" alt="Roam Local" loading="lazy" />
+      </a>
+      <a class="partner-logo navy-bg" href="#" aria-label="Surgo Tech">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/Surgo-tech-logo-white.png" alt="Surgo Tech" loading="lazy" />
+      </a>
+      <a class="partner-logo" href="#" aria-label="NE BIC">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/NE-BIC.png" alt="North East BIC" loading="lazy" />
+      </a>
+      <a class="partner-logo" href="#" aria-label="North East Hotels Association">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/NE-Hotel-Association.png" alt="North East Hotels Association" loading="lazy" />
+      </a>
+      <a class="partner-logo" href="#" aria-label="The Ironing Man">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/The-Ironing-man.png" alt="The Ironing Man" loading="lazy" />
+      </a>
+    </div>
+    <p class="partner-note">Our delivery partner <strong>Lumo</strong> connects the North East to London, Edinburgh and beyond — affordable, low-carbon rail that keeps the region open for business.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="contact">
+  <div class="wrap">
+    <h2>Add your voice to the North East's business alliance</h2>
+    <p>Whether you're a business looking to get involved, a partner who wants to invest in the region, or press with an enquiry — we'd love to hear from you.</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a class="btn btn-primary" href="mailto:hello@first-connections.co.uk">Email the team →</a>
+      <a class="btn btn-ghost" href="https://first-connections.co.uk/" target="_blank" rel="noopener">Visit First Connections</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <span class="mark">NE</span>
+          <span style="color:#fff;">Trade NE<small>North East</small></span>
+        </a>
+        <p>The business alliance for the North East of England. A First Connections initiative, made possible by our delivery partners.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#mission">About Trade NE</a></li>
+          <li><a href="#group">The Group</a></li>
+          <li><a href="#agenda">What We Do</a></li>
+          <li><a href="#partners">Partners</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@first-connections.co.uk">hello@first-connections.co.uk</a></li>
+          <li><a href="https://first-connections.co.uk/" target="_blank" rel="noopener">first-connections.co.uk</a></li>
+          <li>North East England</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Trade NE. All rights reserved.</span>
+      <span class="fc-tag">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/First-Connections-Logo-Small.png" alt="First Connections" />
+        Part of the First Connections group
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  // Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Scroll reveal
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+
+</body>
+</html>
