@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#1f3667" />
 <title>Trade NE | The voice of business across the North East</title>
 <meta name="description" content="Trade NE is the North East's business alliance, championing the region's traders, founders and high streets. A First Connections initiative, made possible by our delivery partners." />
 <link rel="canonical" href="https://trade-ne.co.uk/" />
@@ -13,22 +14,29 @@
 <meta property="og:title" content="Trade NE | The voice of business across the North East" />
 <meta property="og:description" content="The North East's business alliance, championing the region's traders, founders and high streets. A First Connections initiative." />
 <meta property="og:url" content="https://trade-ne.co.uk/" />
-<meta property="og:image" content="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/NE%20website%20Images/Angel_of_the_north1.png" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:image" content="https://trade-ne.co.uk/assets/social.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Trade NE — the business alliance for the North East of England" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Trade NE | The voice of business across the North East" />
 <meta name="twitter:description" content="The North East's business alliance, championing the region's traders, founders and high streets." />
-<meta name="twitter:image" content="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/NE%20website%20Images/Angel_of_the_north1.png" />
+<meta name="twitter:image" content="https://trade-ne.co.uk/assets/social.jpg" />
+<meta name="twitter:image:alt" content="Trade NE — the business alliance for the North East of England" />
 
 <!-- Geo -->
 <meta name="geo.region" content="GB-ENG" />
 <meta name="geo.placename" content="North East England" />
 
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/First-Connections-Logo-Small.png" />
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/First-Connections-Logo-Small.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet" />
 
 <!-- Schema.org -->
@@ -84,6 +92,14 @@
   img{max-width:100%;display:block;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
 
+  /* Keyboard accessibility */
+  :focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;}
+  .skip-link{
+    position:absolute;left:12px;top:-60px;z-index:100;background:var(--gold);color:var(--navy);
+    font-weight:700;padding:10px 16px;border-radius:9px;transition:top .15s;
+  }
+  .skip-link:focus{top:12px;}
+
   /* ---------- The signature: the route line ---------- */
   .route-rule{
     height:2px;border:0;background:var(--border);position:relative;overflow:visible;margin:0;
@@ -122,10 +138,21 @@
   /* ---------- Hero ---------- */
   .hero{
     position:relative;color:var(--white);
+    /* Fallback for browsers without image-set support */
     background:
       linear-gradient(180deg, rgba(22,39,72,0.86) 0%, rgba(31,54,103,0.92) 100%),
-      url("https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/NE%20website%20Images/Angel_of_the_north1.png") center/cover no-repeat;
+      url("assets/hero.jpg") center/cover no-repeat;
     overflow:hidden;
+  }
+  @supports (background-image: image-set(url("assets/hero.webp") type("image/webp"))){
+    .hero{
+      background:
+        linear-gradient(180deg, rgba(22,39,72,0.86) 0%, rgba(31,54,103,0.92) 100%),
+        image-set(
+          url("assets/hero.webp") type("image/webp"),
+          url("assets/hero.jpg") type("image/jpeg")
+        ) center/cover no-repeat;
+    }
   }
   .hero-inner{padding:96px 0 110px;position:relative;z-index:2;}
   .eyebrow{
@@ -245,6 +272,12 @@
   .reveal.in{opacity:1;transform:none;}
 
   /* ---------- Responsive ---------- */
+  /* Tablet: ease the 3-up grids and oversized gaps */
+  @media(max-width:1024px){
+    .mission-grid{gap:40px;}
+    .pillars-grid{gap:18px;}
+    section{padding:64px 0;}
+  }
   @media(max-width:860px){
     .nav-links{
       position:absolute;top:68px;left:0;right:0;background:var(--navy);flex-direction:column;gap:0;
@@ -260,13 +293,26 @@
     .foot-grid{grid-template-columns:1fr;gap:30px;}
     .hero-inner{padding:72px 0 80px;}
   }
+  /* Phone: tighten spacing and stat strip */
+  @media(max-width:560px){
+    section{padding:52px 0;}
+    .wrap{padding:0 18px;}
+    .sec-head{margin-bottom:34px;}
+    .hero-stats{gap:28px 36px;margin-top:38px;padding-top:24px;}
+    .foot-bottom{flex-direction:column;}
+  }
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;}
     .reveal{opacity:1;transform:none;transition:none;}
   }
 </style>
+<noscript>
+  <style>.reveal{opacity:1;transform:none;}</style>
+</noscript>
 </head>
 <body>
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header>
   <div class="wrap nav">
@@ -286,6 +332,8 @@
 </header>
 
 <a id="top"></a>
+
+<main id="main">
 
 <!-- HERO -->
 <section class="hero">
@@ -318,7 +366,10 @@
         <a class="btn btn-primary" href="#contact" style="margin-top:10px;">Work with us →</a>
       </div>
       <div class="mission-img">
-        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/NE%20website%20Images/img-teesside-steel.jpg" alt="Industry and enterprise in the North East of England" loading="lazy" />
+        <picture>
+          <source srcset="assets/mission.webp" type="image/webp" />
+          <img src="assets/mission.jpg" alt="Industry and enterprise in the North East of England" width="1000" height="730" loading="lazy" decoding="async" />
+        </picture>
       </div>
     </div>
   </div>
@@ -393,24 +444,24 @@
       <p>Trade NE is powered by the organisations who invest in the North East alongside us — connecting the region, supporting its businesses and backing the cause.</p>
     </div>
     <div class="partner-strip">
-      <a class="partner-logo" href="https://www.lumo.co.uk/" target="_blank" rel="noopener" aria-label="Lumo Trains">
-        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/lumo-trains.png" alt="Lumo Trains" loading="lazy" />
+      <a class="partner-logo" href="https://www.lumo.co.uk/" target="_blank" rel="noopener" aria-label="Lumo Trains (opens in a new tab)">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/lumo-trains.png" alt="Lumo Trains" loading="lazy" decoding="async" />
       </a>
-      <a class="partner-logo" href="#" aria-label="Roam Local">
-        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/Roam-App_logo.png" alt="Roam Local" loading="lazy" />
-      </a>
-      <a class="partner-logo navy-bg" href="#" aria-label="Surgo Tech">
-        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/Surgo-tech-logo-white.png" alt="Surgo Tech" loading="lazy" />
-      </a>
-      <a class="partner-logo" href="#" aria-label="NE BIC">
-        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/NE-BIC.png" alt="North East BIC" loading="lazy" />
-      </a>
-      <a class="partner-logo" href="#" aria-label="North East Hotels Association">
-        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/NE-Hotel-Association.png" alt="North East Hotels Association" loading="lazy" />
-      </a>
-      <a class="partner-logo" href="#" aria-label="The Ironing Man">
-        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/The-Ironing-man.png" alt="The Ironing Man" loading="lazy" />
-      </a>
+      <div class="partner-logo">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/Roam-App_logo.png" alt="Roam Local" loading="lazy" decoding="async" />
+      </div>
+      <div class="partner-logo navy-bg">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/Surgo-tech-logo-white.png" alt="Surgo Tech" loading="lazy" decoding="async" />
+      </div>
+      <div class="partner-logo">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/NE-BIC.png" alt="North East BIC" loading="lazy" decoding="async" />
+      </div>
+      <div class="partner-logo">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/NE-Hotel-Association.png" alt="North East Hotels Association" loading="lazy" decoding="async" />
+      </div>
+      <div class="partner-logo">
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/The-Ironing-man.png" alt="The Ironing Man" loading="lazy" decoding="async" />
+      </div>
     </div>
     <p class="partner-note">Our delivery partner <strong>Lumo</strong> connects the North East to London, Edinburgh and beyond — affordable, low-carbon rail that keeps the region open for business.</p>
   </div>
@@ -427,6 +478,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -460,7 +513,7 @@
     <div class="foot-bottom">
       <span>© <span id="yr"></span> Trade NE. All rights reserved.</span>
       <span class="fc-tag">
-        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/First-Connections-Logo-Small.png" alt="First Connections" />
+        <img src="https://raw.githubusercontent.com/FIRST-CONNECTIONS/first-connections-network/main/FC-Logos/First-Connections-Logo-Small.png" alt="First Connections" width="22" height="22" loading="lazy" decoding="async" />
         Part of the First Connections group
       </span>
     </div>
@@ -471,15 +524,27 @@
   // Mobile nav
   var toggle = document.getElementById('navToggle');
   var links = document.getElementById('navLinks');
-  toggle.addEventListener('click', function(){
-    var open = links.classList.toggle('open');
+  function setNav(open){
+    links.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.innerHTML = open ? '&times;' : '&#9776;';
+  }
+  toggle.addEventListener('click', function(e){
+    e.stopPropagation();
+    setNav(!links.classList.contains('open'));
   });
   links.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){
-      links.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-    });
+    a.addEventListener('click', function(){ setNav(false); });
+  });
+  // Close on Escape, outside click, or resize to desktop
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && links.classList.contains('open')){ setNav(false); toggle.focus(); }
+  });
+  document.addEventListener('click', function(e){
+    if(links.classList.contains('open') && !links.contains(e.target) && e.target !== toggle){ setNav(false); }
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 860 && links.classList.contains('open')){ setNav(false); }
   });
 
   // Year
